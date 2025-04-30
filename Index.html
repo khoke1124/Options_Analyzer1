@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Options Strategy Analyzer</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Options Strategy Analyzer</h1>
+
+        <div class="input-section">
+            <label for="ticker">Stock Ticker:</label>
+            <input type="text" id="ticker" name="ticker" placeholder="e.g., AAPL" required>
+
+            <label for="expiration">Expiration Date:</label>
+            <input type="date" id="expiration" name="expiration" required>
+
+            <label for="prediction">Price Prediction (at expiration):</label>
+            <input type="number" id="prediction" name="prediction" placeholder="e.g., 180.50" step="0.01" required>
+
+            <button onclick="analyzeStrategies()">Analyze Strategies</button>
+        </div>
+
+        <div class="results-section">
+            <h2>Potential Strategies</h2>
+            <div id="strategies-container">
+                </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
